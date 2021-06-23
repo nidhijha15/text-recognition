@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css"><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"><link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css"><link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.1.min.css"><style>/* Required for full background image */
+  
+  html,
+  body,
+  header,
+  .view {
+  height: 100%;
+  }
+  
+  @media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+  }
+  .top-nav-collapse {
+  background-color: #9a87eb !important;
+  }
+  {%block style_nav%}
+  
+  .navbar:not(.top-nav-collapse) {
+  background:  transparent !important;
+  }
+  {%endblock style_nav%}
+  
+  @media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #9a87eb !important;
+  }
+  }
+  .rgba-gradient {
+  background: -moz-linear-gradient(45deg, rgba(4, 21, 247,0.6), rgba(13, 146, 198, 0.69) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(149, 82, 236, 0.6), rgba(13, 146, 198, 0.69) 100%);
+  background: linear-gradient(to 45deg, rgba(117, 4, 247, 0.6), rgba(13, 146, 198, 0.69) 100%);
+  }</style>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script rel="javascript" type="text/javascript" href="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="{{url_for('home')}}">Text Recognition</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto smooth-scroll">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('home')}}">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="window.open('{{url_for('image')}}', '_self')" href="{{url_for('image')}}" data-offset="90">Image to Text</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="window.open('{{url_for('doc')}}', '_self')" href="{{url_for('doc')}}" data-offset="90">Document to Text</a>
+                </ul>
+                <!-- Social Icon  -->
+                <ul class="navbar-nav nav-flex-icons">
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      <i class="fab fa-facebook-f light-green-text-2"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      <i class="fab fa-twitter light-green-text-2"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link">
+                      <i class="fab fa-instagram light-green-text-2"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    {%block bg%}
+    {%endblock bg%}
+    {%block content%}
+    {%endblock content%}
+    {% block script %}
+    {% endblock script %}
+    </body>
+</html>
